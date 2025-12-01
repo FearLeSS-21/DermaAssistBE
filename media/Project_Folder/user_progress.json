@@ -1,0 +1,273 @@
+{
+    "default_user": [
+        {
+            "timestamp": "2025-06-14 19:49:08",
+            "acne": [],
+            "wrinkles": [
+                {
+                    "confidence": 0.7136576175689697,
+                    "x": 1247,
+                    "y": 611,
+                    "region": "Forehead"
+                }
+            ],
+            "eyebags": [
+                {
+                    "confidence": 0.8352447748184204,
+                    "x": 921,
+                    "y": 841,
+                    "region": "Left Cheek"
+                },
+                {
+                    "confidence": 0.7363744974136353,
+                    "x": 1535,
+                    "y": 884,
+                    "region": "Right Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 11:46:39",
+            "acne": [],
+            "wrinkles": [],
+            "eyebags": [
+                {
+                    "confidence": 0.8765658140182495,
+                    "x": 1046,
+                    "y": 1082,
+                    "region": "Left Cheek"
+                },
+                {
+                    "confidence": 0.8030098676681519,
+                    "x": 1838,
+                    "y": 1132,
+                    "region": "Right Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 14:28:57",
+            "acne": [
+                {
+                    "confidence": 0.5653961896896362,
+                    "x": 2290,
+                    "y": 1571,
+                    "region": "Right Cheek"
+                }
+            ],
+            "wrinkles": [],
+            "eyebags": [
+                {
+                    "confidence": 0.7972251176834106,
+                    "x": 855,
+                    "y": 938,
+                    "region": "Left Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 15:52:45",
+            "acne": [],
+            "wrinkles": [],
+            "eyebags": [
+                {
+                    "confidence": 0.8798423409461975,
+                    "x": 1337,
+                    "y": 757,
+                    "region": "Right Cheek"
+                },
+                {
+                    "confidence": 0.8697898983955383,
+                    "x": 786,
+                    "y": 684,
+                    "region": "Under Left Eye"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 15:52:55",
+            "acne": [],
+            "wrinkles": [
+                {
+                    "confidence": 0.41409456729888916,
+                    "x": 1679,
+                    "y": 1683,
+                    "region": "Chin"
+                }
+            ],
+            "eyebags": [
+                {
+                    "confidence": 0.8408834934234619,
+                    "x": 589,
+                    "y": 672,
+                    "region": "Left Cheek"
+                },
+                {
+                    "confidence": 0.7571205496788025,
+                    "x": 1050,
+                    "y": 638,
+                    "region": "Right Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 15:52:57",
+            "acne": [],
+            "wrinkles": [],
+            "eyebags": [
+                {
+                    "confidence": 0.8490583300590515,
+                    "x": 530,
+                    "y": 623,
+                    "region": "Left Cheek"
+                },
+                {
+                    "confidence": 0.8212709426879883,
+                    "x": 990,
+                    "y": 590,
+                    "region": "Right Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 15:56:19",
+            "acne": [],
+            "wrinkles": [],
+            "eyebags": [
+                {
+                    "confidence": 0.8451732993125916,
+                    "x": 1106,
+                    "y": 646,
+                    "region": "Right Cheek"
+                },
+                {
+                    "confidence": 0.844619870185852,
+                    "x": 599,
+                    "y": 688,
+                    "region": "Left Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 15:57:00",
+            "acne": [
+                {
+                    "confidence": 0.6275327205657959,
+                    "x": 1418,
+                    "y": 1124,
+                    "region": "Right Cheek"
+                },
+                {
+                    "confidence": 0.4421716332435608,
+                    "x": 407,
+                    "y": 422,
+                    "region": "Under Left Eye"
+                }
+            ],
+            "wrinkles": [
+                {
+                    "confidence": 0.6913865804672241,
+                    "x": 480,
+                    "y": 569,
+                    "region": "Left Cheek"
+                },
+                {
+                    "confidence": 0.6124770045280457,
+                    "x": 763,
+                    "y": 142,
+                    "region": "Forehead"
+                },
+                {
+                    "confidence": 0.5846481323242188,
+                    "x": 1245,
+                    "y": 209,
+                    "region": "Forehead"
+                }
+            ],
+            "eyebags": [
+                {
+                    "confidence": 0.8411473631858826,
+                    "x": 678,
+                    "y": 671,
+                    "region": "Under Left Eye"
+                },
+                {
+                    "confidence": 0.5823434591293335,
+                    "x": 1199,
+                    "y": 707,
+                    "region": "Right Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 15:57:01",
+            "acne": [
+                {
+                    "confidence": 0.5463712215423584,
+                    "x": 372,
+                    "y": 396,
+                    "region": "Under Left Eye"
+                }
+            ],
+            "wrinkles": [
+                {
+                    "confidence": 0.5714467763900757,
+                    "x": 729,
+                    "y": 114,
+                    "region": "Forehead"
+                },
+                {
+                    "confidence": 0.5582586526870728,
+                    "x": 451,
+                    "y": 542,
+                    "region": "Left Cheek"
+                },
+                {
+                    "confidence": 0.5494874715805054,
+                    "x": 1198,
+                    "y": 180,
+                    "region": "Forehead"
+                }
+            ],
+            "eyebags": [
+                {
+                    "confidence": 0.8081283569335938,
+                    "x": 642,
+                    "y": 637,
+                    "region": "Under Left Eye"
+                },
+                {
+                    "confidence": 0.5335054397583008,
+                    "x": 1152,
+                    "y": 658,
+                    "region": "Right Cheek"
+                }
+            ]
+        },
+        {
+            "timestamp": "2025-06-20 16:00:23",
+            "acne": [],
+            "wrinkles": [],
+            "eyebags": []
+        },
+        {
+            "timestamp": "2025-06-20 16:00:41",
+            "acne": [
+                {
+                    "confidence": 0.7763903141021729,
+                    "x": 110,
+                    "y": 613,
+                    "region": "Forehead"
+                },
+                {
+                    "confidence": 0.4922028183937073,
+                    "x": 1883,
+                    "y": 1248,
+                    "region": "Right Cheek"
+                }
+            ],
+            "wrinkles": [],
+            "eyebags": []
+        }
+    ]
+}
