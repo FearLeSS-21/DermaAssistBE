@@ -6,3 +6,4 @@ opencv-python
 mediapipe
 numpy
 inference-sdk
+python-dotenv

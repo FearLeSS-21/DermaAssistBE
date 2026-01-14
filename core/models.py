@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class SkinAnalysis(models.Model):
+    """
+    Model representing a skin analysis session initiated by a user.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='scans')
     image = models.ImageField(upload_to="skin_scans/original/%Y/%m/")
     processed_image = models.ImageField(upload_to="skin_scans/processed/%Y/%m/", null=True, blank=True)
@@ -13,15 +16,20 @@ class SkinAnalysis(models.Model):
         return f"Scan {self.id} - {self.user.username}"
 
 class AnalysisResult(models.Model):
+    """
+    Model storing the quantitative results of a skin analysis.
+    """
     analysis = models.OneToOneField(SkinAnalysis, on_delete=models.CASCADE, related_name='result')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     timestamp = models.DateTimeField(auto_now_add=True)
     
+    # Store detailed analysis data as JSON
     acne_data = models.JSONField(default=list)
     wrinkles_data = models.JSONField(default=list)
     eyebags_data = models.JSONField(default=list)
     eczema_data = models.JSONField(default=list)
     
+    # Aggregate scores
     acne_count = models.IntegerField(default=0)
     wrinkle_score = models.FloatField(default=0.0)
     eyebag_score = models.FloatField(default=0.0)
@@ -30,6 +38,9 @@ class AnalysisResult(models.Model):
         return f"Results for Scan {self.analysis.id}"
 
 class Product(models.Model):
+    """
+    Model representing a skincare product recommended to users.
+    """
     name = models.CharField(max_length=255)
     price = models.CharField(max_length=50)
     product_url = models.URLField(max_length=500)

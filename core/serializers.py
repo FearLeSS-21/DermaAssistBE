@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from .models import SkinAnalysis, AnalysisResult, Product
 
 class UserSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the User model, handling registration and creation.
+    """
     password = serializers.CharField(write_only=True)
 
     class Meta:
@@ -18,11 +21,17 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class AnalysisResultSerializer(serializers.ModelSerializer):
+    """
+    Serializer for AnalysisResult to expose analysis scores and data.
+    """
     class Meta:
         model = AnalysisResult
         fields = ['timestamp', 'acne_count', 'wrinkle_score', 'eyebag_score', 'acne_data', 'wrinkles_data']
 
 class SkinAnalysisSerializer(serializers.ModelSerializer):
+    """
+    Serializer for SkinAnalysis, including related results and image URL.
+    """
     result = AnalysisResultSerializer(read_only=True)
     image_url = serializers.SerializerMethodField()
 
@@ -37,6 +46,9 @@ class SkinAnalysisSerializer(serializers.ModelSerializer):
         return None
 
 class ProductSerializer(serializers.ModelSerializer):
+    """
+    Serializer for Product model.
+    """
     class Meta:
         model = Product
         fields = ['id', 'name', 'price', 'product_url', 'skin_concern', 'image_url']
