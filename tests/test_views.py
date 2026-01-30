@@ -1,15 +1,15 @@
-from django.test import TestCase, Client
+from rest_framework.test import APITestCase
 from django.urls import reverse
 from core.models import Product
 
-class ViewTests(TestCase):
+class ViewTests(APITestCase):
     def setUp(self):
-        self.client = Client()
         Product.objects.create(name="Alpha Cream", price="50", product_url="#", skin_concern="Acne")
         Product.objects.create(name="Beta Gel", price="60", product_url="#", skin_concern="Wrinkles")
 
     def test_product_search(self):
         url = reverse('product_search')
+        # APIClient returns data as dict, not bytes
         response = self.client.get(url, {'q': 'Alpha'})
         self.assertEqual(response.status_code, 200)
         self.assertEqual(len(response.data), 1)

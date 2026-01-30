@@ -11,12 +11,12 @@ class UtilsTests(TestCase):
 
     def test_recommend_acne(self):
         recs = recommend_products(acne_severity=10, wrinkle_severity=0, eyebag_severity=0)
-        names = [r['name'] for r in recs]
+        names =[r['name'] for r in recs]
         self.assertIn("Acne Fix", names)
         self.assertNotIn("Anti Aging", names)
 
     def test_recommend_mixed(self):
         recs = recommend_products(acne_severity=5, wrinkle_severity=5, eyebag_severity=0)
-        names = [r['name'] for r in recs]
+        names =[r['name'] for r in recs]
         self.assertIn("Acne Fix", names)
         self.assertIn("Anti Aging", names)
