@@ -6,15 +6,6 @@ from..models import SkinAnalysis, AnalysisResult
 from..serializers import SkinAnalysisSerializer 
 from.utils import get_facial_region, analyze_roboflow, recommend_products 
 
-<<<<<<< HEAD
-class UploadImageView(APIView ):
-    parser_classes =(MultiPartParser, FormParser )
-    permission_classes =[permissions.IsAuthenticated ]
-
-    def post(self, request ):
-        if 'image'not in request.FILES :
-            return Response({'error':'No image provided'}, status =400 )
-=======
 class UploadImageView(APIView):
     """
     API View to handle image uploads for skin analysis.
@@ -37,7 +28,6 @@ class UploadImageView(APIView):
         """
         if 'image' not in request.FILES:
             return Response({'error': 'No image provided'}, status=400)
->>>>>>> 3afbbd23597a33ba8104ff11c6fa0978c4803485
 
         analysis =SkinAnalysis.objects.create(
         user =request.user,
@@ -46,18 +36,6 @@ class UploadImageView(APIView):
         )
         image_path =analysis.image.path 
 
-<<<<<<< HEAD
-        cv_img, landmarks =get_facial_region(image_path )
-        if landmarks is None :
-            return Response({'warning':'No face detected.Image saved but analysis skipped.'})
-
-        eyebags =analyze_roboflow('eyebags', image_path )
-        wrinkles =analyze_roboflow('wrinkles', image_path )
-
-        acne_count =0 
-        wrinkle_score =len(wrinkles )*0.1 
-        eyebag_score =len(eyebags )*0.2 
-=======
         # Perform facial detection
         cv_img, landmarks = get_facial_region(image_path)
         if landmarks is None:
@@ -70,7 +48,6 @@ class UploadImageView(APIView):
         acne_count = 0  # Placeholder: Implement actual acne detection if available
         wrinkle_score = len(wrinkles) * 0.1
         eyebag_score = len(eyebags) * 0.2
->>>>>>> 3afbbd23597a33ba8104ff11c6fa0978c4803485
 
         result =AnalysisResult.objects.create(
         analysis =analysis,
@@ -95,15 +72,6 @@ class UploadImageView(APIView):
         "analysis_id":analysis.id 
         })
 
-<<<<<<< HEAD
-class ResultsView(APIView ):
-    permission_classes =[permissions.IsAuthenticated ]
-
-    def get(self, request ):
-        latest =AnalysisResult.objects.filter(user =request.user ).last()
-        if not latest :
-            return Response({"message":"No scans found."})
-=======
 class ResultsView(APIView):
     """
     API View to retrieve the latest analysis results for the authenticated user.
@@ -123,7 +91,6 @@ class ResultsView(APIView):
         latest = AnalysisResult.objects.filter(user=request.user).last()
         if not latest:
             return Response({"message": "No scans found."})
->>>>>>> 3afbbd23597a33ba8104ff11c6fa0978c4803485
         return Response({
         "date":latest.timestamp,
         "scores":{

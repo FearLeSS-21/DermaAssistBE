@@ -6,11 +6,7 @@ opencv-python-headless
 mediapipe
 numpy
 inference-sdk
-<<<<<<< HEAD
 ultralytics
 djangorestframework-simplejwt
 python-dotenv
 gunicorn
-=======
-python-dotenv
->>>>>>> 3afbbd23597a33ba8104ff11c6fa0978c4803485

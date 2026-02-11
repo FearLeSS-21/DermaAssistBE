@@ -494,7 +494,7 @@ async def error_handler(update :Update, context :CallbackContext ):
         ) if update else logger.info("No update available for network error message.")
 
 def main():
-    print("✅ Loaded token from.env:", os.getenv("TELEGRAM_BOT_TOKEN"))
+    # Removed sensitive token printing
 
     if not check_ollama_connection():
         logger.error("Cannot start bot: Ollama connection failed.Proceeding without AI responses.")

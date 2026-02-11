@@ -5,11 +5,6 @@ from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token 
 from..serializers import UserSerializer 
 
-<<<<<<< HEAD
-class RegisterView(APIView ):
-    def post(self, request ):
-        serializer =UserSerializer(data =request.data )
-=======
 class RegisterView(APIView):
     """
     API View for user registration.
@@ -27,7 +22,6 @@ class RegisterView(APIView):
                       or errors if validation fails.
         """
         serializer = UserSerializer(data=request.data)
->>>>>>> 3afbbd23597a33ba8104ff11c6fa0978c4803485
         if serializer.is_valid():
             user =serializer.save()
             token, _ =Token.objects.get_or_create(user =user )
@@ -38,16 +32,6 @@ class RegisterView(APIView):
             }, status =status.HTTP_201_CREATED )
         return Response(serializer.errors, status =status.HTTP_400_BAD_REQUEST )
 
-<<<<<<< HEAD
-class LoginView(APIView ):
-    def post(self, request ):
-        username =request.data.get('username')
-        password =request.data.get('password')
-        user =authenticate(username =username, password =password )
-
-        if user :
-            token, _ =Token.objects.get_or_create(user =user )
-=======
 class LoginView(APIView):
     """
     API View for user login.
@@ -70,7 +54,6 @@ class LoginView(APIView):
         
         if user:
             token, _ = Token.objects.get_or_create(user=user)
->>>>>>> 3afbbd23597a33ba8104ff11c6fa0978c4803485
             return Response({
             'token':token.key,
             'user_id':user.id,
