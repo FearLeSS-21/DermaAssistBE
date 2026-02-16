@@ -15,7 +15,8 @@ import logging
 import urllib.parse
 from typing import List, Dict, Optional, Any
 
-# Configure logging to file and console with UTF-8 encoding
+# Configure logging to file and console with UTF-8 encoding//
+# hello
 logging.basicConfig(
     level=logging.DEBUG,  # DEBUG level to see card HTML
     format="%(asctime)s - %(levelname)s - %(message)s",
