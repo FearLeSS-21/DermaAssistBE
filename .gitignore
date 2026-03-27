@@ -2,3 +2,4 @@ venv/
 acne.pt
 AIModels/
 AIChatbot/
+.env

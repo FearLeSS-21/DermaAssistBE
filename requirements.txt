@@ -2,7 +2,11 @@ django
 djangorestframework
 django-cors-headers
 mysqlclient
-opencv-python
+opencv-python-headless
 mediapipe
 numpy
 inference-sdk
+ultralytics
+djangorestframework-simplejwt
+python-dotenv
+gunicorn
